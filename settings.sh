@@ -30,11 +30,11 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 #echo "Disable shadow in screenshots"
 #defaults write com.apple.screencapture disable-shadow -bool true
 
-echo "Enable highlight hover effect for the grid view of a stack (Dock)"
-defaults write com.apple.dock mouse-over-hilte-stack -bool true
+#echo "Enable highlight hover effect for the grid view of a stack (Dock)"
+#defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
-echo "Enable spring loading for all Dock items"
-defaults write enable-spring-load-actions-on-all-items -bool true
+#echo "Enable spring loading for all Dock items"
+#defaults write enable-spring-load-actions-on-all-items -bool true
 
 #echo "Show indicator lights for open applications in the Dock"
 #defaults write com.apple.dock show-process-indicators -bool true
@@ -53,14 +53,14 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 #echo "Enable the 2D Dock"
 #defaults write com.apple.dock no-glass -bool true
 
-echo "Show indicator lights for open applications in the Dock"
-defaults write com.apple.dock show-process-indicators -bool true
+#echo "Show indicator lights for open applications in the Dock"
+#defaults write com.apple.dock show-process-indicators -bool true
 
 echo "Make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true
 
-echo "Enable iTunes track notifications in the Dock"
-defaults write com.apple.dock itunes-notifications -bool true
+#echo "Enable iTunes track notifications in the Dock"
+#defaults write com.apple.dock itunes-notifications -bool true
 
 echo "Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -68,14 +68,14 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Disable the Ping sidebar in iTunes"
-defaults write com.apple.iTunes disablePingSidebar -bool true
+#echo "Disable the Ping sidebar in iTunes"
+#defaults write com.apple.iTunes disablePingSidebar -bool true
 
-echo "Disable all the other Ping stuff in iTunes"
-defaults write com.apple.iTunes disablePing -bool true
+#echo "Disable all the other Ping stuff in iTunes"
+#defaults write com.apple.iTunes disablePing -bool true
 
-echo "Make ⌘ + F focus the search input in iTunes"
-defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+#echo "Make ⌘ + F focus the search input in iTunes"
+#defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 echo "Show the ~/Library folder"
 chflags nohidden ~/Library
@@ -83,5 +83,5 @@ chflags nohidden ~/Library
 echo "Kill affected applications"
 for app in Safari Finder Dock Mail; do killall "$app"; done
 
-echo "Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)"
-echo "0x08000100:0" > ~/.CFUserTextEncoding
+#echo "Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)"
+#echo "0x08000100:0" > ~/.CFUserTextEncoding
