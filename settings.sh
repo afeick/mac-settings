@@ -6,6 +6,9 @@
 echo "Show all filename extensions in Finder"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+echo "Show all hidden files"
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
 echo "Use current directory as default search scope in Finder"
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
