@@ -2,9 +2,12 @@
 #/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 # export PATH="$PATH:/Developer/Tools"
 
-export LS_OPTIONS='--color=auto'
-export CLICOLOR='Yes'
-export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
+export PATH="$PATH:/Users/afeick/Library/Android/sdk/platform-tools:/Users/afeick/Library/Android/sdk/emulator"
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home'
+
+#export LS_OPTIONS='--color=auto'
+#export CLICOLOR='Yes'
+#export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 ## COLOR CHART:
 #DIR = Bx #Bold red text with default background
 #SYM_LINK = gx #cyan text with default background
@@ -40,3 +43,20 @@ alias cp='cp -i'
 alias hide='chflags hidden'
 alias unhide='chflags nohidden'
 alias show='chflags nohidden'
+
+alias erase_simulators='xcrun simctl list devices | grep -v \'^[-=]\' | cut -d "(" -f2 | cut -d ")" -f1 | xargs -I {} xcrun simctl erase "{}"'
+alias delete_old_simulators='xcrun simctl delete unavailable'
+
+### Python envronment vars 
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+
+### AWS environment vars
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+### Android environment
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
