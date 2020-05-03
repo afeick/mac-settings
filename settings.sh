@@ -80,8 +80,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 #echo "Make ⌘ + F focus the search input in iTunes"
 #defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
-echo "Show the ~/Library folder"
-chflags nohidden ~/Library
+#echo "Show the ~/Library folder"
+#chflags nohidden ~/Library
 
 echo "Kill affected applications"
 for app in Safari Finder Dock Mail; do killall "$app"; done
